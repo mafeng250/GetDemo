@@ -31,7 +31,6 @@ public class ChannelController {
 	@GetMapping("/{id}")
 	public Channel getChannel(@PathVariable int id) {
 		System.out.println("获取频值.id="+id);
-		Logger.info("正在读取频道："+id);
 		Channel c=service.getChannel(id);
 		if(c!=null) {
 			return c;
