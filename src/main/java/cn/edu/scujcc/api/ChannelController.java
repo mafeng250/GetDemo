@@ -13,13 +13,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import ch.qos.logback.classic.Logger;
 import cn.edu.scujcc.model.Channel;
 import cn.edu.scujcc.service.ChannelService;
 
 @RestController
 @RequestMapping("/channel")
 public class ChannelController {
-	
 	@Autowired
 	private ChannelService service;
 	
@@ -31,6 +31,7 @@ public class ChannelController {
 	@GetMapping("/{id}")
 	public Channel getChannel(@PathVariable int id) {
 		System.out.println("获取频值.id="+id);
+		Logger.info("正在读取频道："+id);
 		Channel c=service.getChannel(id);
 		if(c!=null) {
 			return c;

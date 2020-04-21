@@ -15,7 +15,7 @@ public class Channel {
 	private String url;
 	
 	/**
-	 * 返回此频道的所有评论
+	 * 返回此频道的所有评论！！！
 	 * @return
 	 */
 	public String getId() {
